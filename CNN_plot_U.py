@@ -38,6 +38,7 @@ levels = np.delete(levels, np.where(levels==0)[0][0])
 zeros_len = [3,5,7,9,11,13]
 title = ['(a)','(b)','(c)','(d)','(e)','(f)']
 
+
 # Plot: SSW
 fig, ax = plt.subplots(ncols=3, nrows=2, subplot_kw={'projection':map_proj},\
                        facecolor='w', figsize=[10,9])
@@ -70,6 +71,7 @@ cb = plt.colorbar(im1, cax=cax , orientation='horizontal', extend='max')
 cb.set_label('% (out of {} tests)'.format(int(num_of_tests)))
 plt.tight_layout()
 plt.savefig('figures/CNN_SSW_errorplot_U.png', dpi=250)
+
 
 #%%
 # Plot: non-SSW
